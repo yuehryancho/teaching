@@ -59,6 +59,10 @@ p strong{color:var(--tx);font-weight:500}
 .btn-o{font-family:var(--sans);font-size:12px;font-weight:500;padding:8px 16px;border-radius:8px;background:transparent;color:var(--g);border:1px solid var(--g);text-decoration:none;display:inline-block;transition:all .2s}
 .btn-o:hover{background:var(--gl)}
 
+/* Earlier teaching at another university: all gray, so it reads as past and stays behind the NTU courses */
+.sl-past{color:var(--mu)}
+.proj-past .proj-num{color:var(--mu)}
+
 /* FACTS (course logistics) */
 .facts{display:grid;grid-template-columns:max-content 1fr;gap:.6rem 1.4rem;margin-top:1rem;font-size:13px}
 .facts dt{color:var(--g);font-family:var(--serif);font-weight:700;font-size:13px;line-height:1.6;white-space:nowrap}
