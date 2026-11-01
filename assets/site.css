@@ -3,6 +3,7 @@
 :root{
   color-scheme:light dark;
   --g:#1D9E75;--gl:#E1F5EE;--gm:#0F6E56;--gd:#085041;
+  --o:#E07A2F;--ol:#FCF0E6;--od:#9A4A12;
   --tx:#1a1a1a;--mu:#555;--bg:#fff;--bg2:#f7f7f5;
   --bd:rgba(0,0,0,0.1);
   --serif:'Playfair Display',Georgia,serif;
@@ -59,6 +60,12 @@ p strong{color:var(--tx);font-weight:500}
 .btn-o{font-family:var(--sans);font-size:12px;font-weight:500;padding:8px 16px;border-radius:8px;background:transparent;color:var(--g);border:1px solid var(--g);text-decoration:none;display:inline-block;transition:all .2s}
 .btn-o:hover{background:var(--gl)}
 
+/* Earlier teaching at another university: muted orange, the road illustration's second color */
+.sl-past{color:var(--od)}
+.proj-past{background:var(--ol);border-color:rgba(224,122,47,.35)}
+.proj-past .proj-header{border-bottom-color:rgba(224,122,47,.3)}
+.proj-past .proj-num{color:var(--od)}
+
 /* FACTS (course logistics) */
 .facts{display:grid;grid-template-columns:max-content 1fr;gap:.6rem 1.4rem;margin-top:1rem;font-size:13px}
 .facts dt{color:var(--g);font-family:var(--serif);font-weight:700;font-size:13px;line-height:1.6;white-space:nowrap}
@@ -107,7 +114,8 @@ footer .footer-y{font-family:var(--serif);font-size:18px;color:var(--g);font-sty
     --tx:#e6edf3;--mu:#9aa3ad;
     --bd:rgba(255,255,255,0.14);
     --gl:rgba(29,158,117,0.18);
-    --gm:#2DBE8C;--gd:#6ED5B5
+    --gm:#2DBE8C;--gd:#6ED5B5;
+    --ol:rgba(224,122,47,0.14);--od:#F4A46A
   }
 }
 
