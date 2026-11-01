@@ -1,0 +1,126 @@
+/* Course pages share the lab site's tokens, type and components (yuehryancho.github.io/lab/) */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  color-scheme:light dark;
+  --g:#1D9E75;--gl:#E1F5EE;--gm:#0F6E56;--gd:#085041;
+  --tx:#1a1a1a;--mu:#555;--bg:#fff;--bg2:#f7f7f5;
+  --bd:rgba(0,0,0,0.1);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'IBM Plex Sans',system-ui,sans-serif
+}
+body{font-family:var(--sans);color:var(--tx);background:var(--bg)}
+.site{max-width:980px;margin:0 auto}
+a{color:var(--g)}
+:focus-visible{outline:2px solid var(--g);outline-offset:2px;border-radius:4px}
+
+/* NAV */
+nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 2rem;border-bottom:.5px solid var(--bd);position:sticky;top:0;background:var(--bg);z-index:10}
+.nav-wordmark{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--tx)}
+.nav-y{font-family:var(--serif);font-size:30px;color:var(--g);font-style:italic;font-weight:400;line-height:.9;display:inline-block}
+.nav-name{font-family:var(--serif);font-size:16px;font-weight:700;line-height:1}
+.nav-links{display:flex;flex-wrap:wrap;gap:.3rem;list-style:none;align-items:center}
+.nav-links a{font-size:12px;color:var(--mu);text-decoration:none;padding:5px 10px;border-radius:6px;transition:all .15s}
+.nav-links a:hover,.nav-links a:focus{color:var(--tx);background:var(--bg2)}
+.nav-links a[aria-current="page"]{color:var(--gd);background:var(--gl)}
+
+/* SECTIONS */
+.page-section{padding:3.5rem 2rem;border-bottom:.5px solid var(--bd)}
+.page-section:last-of-type{border-bottom:none}
+.hero{padding:4.5rem 2rem 3.5rem;border-bottom:.5px solid var(--bd)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gd);margin-bottom:1.2rem}
+.eyebrow-line{width:20px;height:1px;background:var(--g)}
+h1{font-family:var(--serif);font-size:44px;line-height:1.1;letter-spacing:-.5px;margin-bottom:1rem;text-wrap:balance}
+h1 em{font-style:italic;color:var(--g)}
+.hero-sub{font-size:14px;color:var(--mu);line-height:1.85;max-width:620px}
+.hero-meta{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--g);font-weight:500;margin-bottom:.8rem}
+.hero-unit{font-size:13px;color:var(--mu);font-style:italic;margin-top:-.3rem;margin-bottom:1.2rem}
+
+/* TYPOGRAPHY */
+.sl{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--g);font-weight:500;margin-bottom:.6rem;display:flex;align-items:center;gap:8px}
+.sl::after{content:'';flex:1;height:.5px;background:var(--bd)}
+h2{font-family:var(--serif);font-size:28px;line-height:1.2;margin-bottom:.8rem;text-wrap:balance}
+h3{font-family:var(--serif);font-size:19px;line-height:1.25;margin-bottom:.5rem}
+p{font-size:14px;color:var(--mu);line-height:1.85;margin-bottom:.7rem;max-width:70ch}
+p strong{color:var(--tx);font-weight:500}
+.out-section{margin-top:2rem}
+.out-section:first-of-type{margin-top:1rem}
+
+/* COURSE CARDS (same as the lab site's .proj) */
+.proj-list{display:flex;flex-direction:column;gap:16px;margin-top:1rem}
+.proj{border:.5px solid var(--bd);border-radius:12px;overflow:hidden;background:var(--bg2)}
+.proj-header{padding:1.2rem 1.4rem;border-bottom:.5px solid var(--bd)}
+.proj-num{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--g);margin-bottom:4px}
+.proj-title{font-family:var(--serif);font-size:19px;line-height:1.25;margin-bottom:3px}
+.proj-title a{color:var(--tx);text-decoration:none}
+.proj-title a:hover{color:var(--g)}
+.proj-sub{font-size:12px;color:var(--mu);font-style:italic}
+.proj-body{padding:1rem 1.4rem 1.2rem}
+.proj-body p{font-size:13px}
+.btn-o{font-family:var(--sans);font-size:12px;font-weight:500;padding:8px 16px;border-radius:8px;background:transparent;color:var(--g);border:1px solid var(--g);text-decoration:none;display:inline-block;transition:all .2s}
+.btn-o:hover{background:var(--gl)}
+
+/* FACTS (course logistics) */
+.facts{display:grid;grid-template-columns:max-content 1fr;gap:.6rem 1.4rem;margin-top:1rem;font-size:13px}
+.facts dt{color:var(--g);font-family:var(--serif);font-weight:700;font-size:13px;line-height:1.6;white-space:nowrap}
+.facts dd{color:var(--tx);margin:0;line-height:1.6;min-width:0}
+.facts dd i{font-style:italic}
+
+/* OBJECTIVES */
+.objectives{list-style:none;counter-reset:obj;margin-top:1rem;padding:0}
+.objectives li{counter-increment:obj;position:relative;padding:.9rem 1.2rem .9rem 3.2rem;background:var(--bg2);border-left:2px solid var(--g);border-radius:8px;margin-bottom:.6rem;font-size:14px;color:var(--tx);line-height:1.7}
+.objectives li::before{content:counter(obj);position:absolute;left:1rem;top:.8rem;font-family:var(--serif);font-size:20px;font-weight:700;color:var(--g);line-height:1}
+
+/* SCHEDULE */
+.note{font-size:12.5px;color:var(--mu);margin:.4rem 0 0}
+.tbl{overflow-x:auto;margin-top:1rem;border:.5px solid var(--bd);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:560px}
+th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--mu);font-weight:500;padding:.6rem .8rem;background:var(--bg2);border-bottom:.5px solid var(--bd)}
+td{padding:.65rem .8rem;border-bottom:.5px solid var(--bd);color:var(--tx);line-height:1.55;vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.wk{font-family:var(--serif);font-weight:700;color:var(--g);white-space:nowrap}
+td.dt{white-space:nowrap;color:var(--mu);font-variant-numeric:tabular-nums}
+td.slides{white-space:nowrap;color:var(--mu)}
+td.slides a{font-size:12px;font-weight:500;text-decoration:none;border-bottom:1px solid var(--gl)}
+td.slides a:hover{border-bottom-color:var(--g)}
+tr.off td{color:var(--mu);font-style:italic}
+tr.now td{background:var(--gl)}
+tr.now td.wk::after{content:"This week";display:block;font-family:var(--sans);font-size:9.5px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--gd)}
+.mod{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--g);font-weight:500;margin-right:6px}
+
+/* ASSESSMENT */
+.grades{display:grid;grid-template-columns:max-content 1fr;gap:.9rem 1.4rem;margin-top:1rem;font-size:13.5px}
+.grades dt{font-family:var(--serif);font-weight:700;color:var(--g);font-size:20px;line-height:1.2;font-variant-numeric:tabular-nums}
+.grades dd{margin:0;line-height:1.65;color:var(--mu);min-width:0}
+.grades dd strong{display:block;color:var(--tx);font-weight:500}
+.concept{background:var(--bg2);border-radius:8px;padding:.9rem 1rem;margin:1rem 0 0;border-left:2px solid var(--g)}
+.concept-lbl{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--g);font-weight:500;margin-bottom:4px}
+.concept p{margin:0;font-size:13px}
+
+footer{text-align:center;padding:1.5rem 2rem;font-size:11px;color:var(--mu);border-top:.5px solid var(--bd)}
+footer p{font-size:11px;margin:0 auto;max-width:none;line-height:1.7}
+footer .footer-y{font-family:var(--serif);font-size:18px;color:var(--g);font-style:italic;display:inline-block;margin-right:6px;vertical-align:-2px}
+
+/* DARK MODE - follows OS preference, as on the lab site */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0d1117;--bg2:#161b22;
+    --tx:#e6edf3;--mu:#9aa3ad;
+    --bd:rgba(255,255,255,0.14);
+    --gl:rgba(29,158,117,0.18);
+    --gm:#2DBE8C;--gd:#6ED5B5
+  }
+}
+
+@media(max-width:640px){
+  nav{padding:.7rem 1rem;flex-wrap:wrap}
+  .page-section{padding:2.5rem 1rem}
+  .hero{padding:3rem 1rem 2.5rem}
+  h1{font-size:32px}
+  h2{font-size:24px}
+  table{min-width:0}
+  th,td{padding:.55rem .5rem}
+  .facts,.grades{grid-template-columns:1fr;gap:.15rem 0}
+  .facts dt,.grades dt{margin-top:.7rem}
+  .facts dt:first-of-type,.grades dt:first-of-type{margin-top:0}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
