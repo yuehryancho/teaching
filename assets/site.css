@@ -128,3 +128,15 @@ footer .footer-y{font-family:var(--serif);font-size:18px;color:var(--g);font-sty
   .facts dt:first-of-type,.grades dt:first-of-type{margin-top:0}
 }
 @media (prefers-reduced-motion: reduce){*{transition:none!important}}
+
+/* WIDE SCREENS: 1200 px content; the nav bar and the divider lines run the full width of the window */
+html{overflow-x:clip}
+.site{max-width:1200px}
+nav{box-shadow:0 0 0 100vmax var(--bg);clip-path:inset(0 -100vmax);border-bottom:none}
+.hero,.page-section,footer{position:relative}
+.hero,.page-section{border-bottom:none}
+footer{border-top:none}
+nav::after,.hero::after,.page-section::after,footer::before{content:'';position:absolute;left:50%;width:100vw;transform:translateX(-50%);border-bottom:.5px solid var(--bd);pointer-events:none}
+nav::after,.hero::after,.page-section::after{bottom:0}
+footer::before{top:0}
+.page-section:last-of-type::after{display:none}
